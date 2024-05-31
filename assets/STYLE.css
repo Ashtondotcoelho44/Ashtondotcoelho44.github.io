@@ -6,6 +6,7 @@ body {
 
 h1, h2 {
   text-align: center;
+  font-size: larger;
 }
 
 .input-section {
@@ -25,7 +26,6 @@ h1, h2 {
   padding: 5px;
   margin-right: 10px;
 }
-
 .input-section button {
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -41,25 +41,29 @@ h1, h2 {
 }
 
 .expenses-list {
-  margin: 20px;
+  align-items: center;
+  font-size: larger;
+  margin: 100px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 2px solid #FFFFF0;
+  border: 5px solid #87d4e7;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  border-bottom: 2px solid #FFFFF0;
+  border: 5px solid #87d4e7;
+  padding: 15px;
+  text-align: center;
+  text-shadow: #FFFFF0;
+  border-bottom: 5px solid #FFFFF0;
 }
 
 th {
   background-color: #D90429;
-  color: white;
+  color: rgb(0, 0, 0);
+  font-size: larger;
 }
 
 tfoot td {
@@ -67,17 +71,34 @@ tfoot td {
 }
 
 .delete-btn {
-  padding: 5px 10px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 5px;
+  color: rgb(219, 218, 218);
+  border-style: solid;
+  background-color: transparent;
+  border-color: rgb(219, 218, 218);
+  width: 120px;
+  height: 40px;
+  transition: 0.1s ease;
+  text-transform: uppercase;
+  border-width: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .delete-btn:hover {
-  background-color: #c0392b;
-}
+    color: rgb(247, 247, 247);
+    background-color: rgb(202, 25, 25);
+    border-color: rgb(202, 25, 25);
+    text-shadow: 0 0 1px white, 0 0 20px white, 0 0 15px white;
+    box-shadow: 0 0 1px rgb(202, 25, 25), 0 0 10px rgb(202, 25, 25),
+      0 0 60px rgb(202, 25, 25), 0 0 120px rgb(202, 25, 25);
+    font-size: 20px;
+    width: 130px;
+    height: 50px;
+    letter-spacing: 3px;
+  }
 
 select[name="category"] {
   height: 40px;
