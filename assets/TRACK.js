@@ -1,13 +1,3 @@
-loginBtn.addEventListener('click', function() {
-  if (usernameInput.value === validUsername && passwordInput.value === validPassword) {
-    document.querySelector('.login-section').style.display = 'none';
-    document.querySelector('.input-section').style.display = 'block';
-    document.querySelector('.expenses-list').style.display = 'block';
-  } else {
-    alert('Invalid username or password');
-  }
-});
-
 let expenses = [];
 let totalAmount = 0;
 
@@ -36,7 +26,6 @@ addBtn.addEventListener('click', function() {
         return;
     }
     expenses.push({category, amount, date});
-
     totalAmount += amount;
     totalAmountCell.textContent = totalAmount;
 
@@ -91,5 +80,4 @@ for (const expense of expenses) {
     amountCell.textContent = expense.amount;
     dateCell.textContent = expense.date;
     deleteCell.appendChild(deleteBtn);
-    
 }
