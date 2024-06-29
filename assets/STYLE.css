@@ -1,19 +1,40 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color:  #8F9779;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --black: #0E0E0E;
+  --white: #E9E9E9;
+  --red: #ED4245;
+  --blue: #5865F2;
+  --green: #57F287;
 }
 
-h1, h2 {
-  text-align: center;
-  font-size: larger;
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: var(--white);
+  color: var(--black);
 }
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.table-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+} 
 
 .input-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: large;
+  font-weight: 600;
   padding: 50px;
 }
 
@@ -22,47 +43,68 @@ h1, h2 {
   margin-right: 10px;
 }
 
-.input-section input[type="NUMBER"],.input-section input[type="DATE"] {
+.input-section input[type="NUMBER"], .input-section input[type="DATE"] {
   padding: 5px;
   margin-right: 10px;
+  color: var(--black);
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: var(--black);
 }
+
 .input-section button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+  width: 80px;
+  height: 40px;
+  background-color: var(--green);
+  color: var(--black);
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 20px;
 }
 
 .input-section button:hover {
-  background-color: #0c8ee4;
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 900;
+  box-shadow: 0 0 1px var(--green), 0 0 5px var(--green), 0 0 10px var(--green), 0 0 50px var(--green);
+  transition: ease 150ms;
+}
+select {
+  width: auto;
+  height: 40px;
+  color: var(--black);
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: var(--black);
+}
+
+option {
+  color: var(--black);
+  font-size: 16px;
 }
 
 .expenses-list {
   align-items: center;
   font-size: larger;
-  margin: 100px;
+  margin: 100px;;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 5px solid #87d4e7;
+  border: 3px solid var(--black);
 }
 
 th, td {
-  border: 5px solid #87d4e7;
   padding: 15px;
   text-align: center;
-  text-shadow: #FFFFF0;
-  border-bottom: 5px solid #FFFFF0;
+  text-shadow: var(--black);
+  border:3px solid var(--black);
 }
 
 th {
-  background-color: #D90429;
-  color: rgb(0, 0, 0);
+  background-color: var(--blue);
+  color: #e9e9e9;
   font-size: larger;
 }
 
@@ -71,34 +113,23 @@ tfoot td {
 }
 
 .delete-btn {
-  cursor: pointer;
-  border-radius: 5px;
-  color: rgb(219, 218, 218);
-  border-style: solid;
-  background-color: transparent;
-  border-color: rgb(219, 218, 218);
   width: 120px;
   height: 40px;
-  transition: 0.1s ease;
-  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--red);
   border-width: 2px;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 2px;
+  border-radius: 25px;
+  border-color: var(--red);
+  font-weight: 300;
 }
 
 .delete-btn:hover {
-    color: rgb(247, 247, 247);
-    background-color: rgb(202, 25, 25);
-    border-color: rgb(202, 25, 25);
-    text-shadow: 0 0 1px white, 0 0 20px white, 0 0 15px white;
-    box-shadow: 0 0 1px rgb(202, 25, 25), 0 0 10px rgb(202, 25, 25),
-      0 0 60px rgb(202, 25, 25), 0 0 120px rgb(202, 25, 25);
-    font-size: 20px;
-    width: 130px;
-    height: 50px;
-    letter-spacing: 3px;
-  }
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: 900;
+  box-shadow: 0 0 1px var(--red), 0 0 5px var(--red), 0 0 10px var(--red), 0 0 50px var(--red);
+  transition: ease 150ms;
+}
 
 select[name="category"] {
   height: 40px;
@@ -109,8 +140,3 @@ select[name="amount"], select[name="date"] {
   height: 40px;
   width: 200px;
 }
-
-option {
-  font-size: 16px;
-}
-
